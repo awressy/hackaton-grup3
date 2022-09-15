@@ -23,7 +23,6 @@ function eventPost(){
         post.innerHTML = "";
         acceptData();
     }
-}
 
 let data = {};
 
