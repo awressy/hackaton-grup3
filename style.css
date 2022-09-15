@@ -4,25 +4,56 @@ body{
 }
 
 .kotak {
-    margin: 5px;
     padding: 10px;
+}
+
+.container form{
+    width: 500px;
+    margin: 20px auto;
+    top: 100px;
 }
 
 input, textarea{
     font-size: 20px;
+    margin: 10px 0;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 input[type=text]{
-    width: 200px;
-    
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px solid grey;
 }
 
 textarea{
-    
+    width: 100%;
+    height: 150px;
+    padding: 10px 15px;
+    border: none;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    margin-top: 20px;
 }
 
-input[type=button] {
-    
+.container form input[type=button] {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.container form input[type=button]:hover {
+    background-color: #05f;
+    cursor: pointer;
 }
 
 .bluk {
@@ -31,9 +62,9 @@ input[type=button] {
 
 .container{
     font-size: 20px;
-    background-color: #aaa;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(26,127,176,1) 0%, rgba(0,212,255,1) 100%);
     margin: 0;
-    padding-top: 30px;
 }
 
 .main{
@@ -42,4 +73,28 @@ input[type=button] {
     margin: 0 auto;
     background-color: #fff;
     height: 100vh;
+}
+.thumbpost {
+    width: 70%;
+    margin: -30px auto 0;
+}
+
+.thumbpost > div {
+    margin: 20px 0;
+    background-color: #d5d5d5;
+    padding: 10px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 3px solid #05f;
+    opacity: 0.90;
+}
+
+.username {
+    font-size: 17px;
+    font-weight: bold;
+    color: #05f;
+}
+
+.post {
+    margin-top: 10px;
+    font-size: 21px;
 }
