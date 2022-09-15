@@ -16,49 +16,54 @@ function eventPost(){
     } else {
         console.log("successs");
         message.innerHTML = "";
-        acceptData();
+        createPost(username.value, message.value);
+
     }
 }
 
 
 //kode username
-    
 
-let data = {};
-let result = [];
+// yang dikomen dihapus aja yaa
 
-function acceptData() {
-    data["text"] = username.value;
-    data["message"] = message.value;
-    console.log(data);
-    createPost();
-};
+// // let data = {};
+// // let result = [];
 
-function createPost() {
-    let temp = [data.text, data.message];
-    result.unshift(temp);
-    let messages = '';
-    for(let i = 0; i < result.length; i++){
-        messages += `<div class="kotak" id="message-${i}">
-            <span class="username">${result[i][0]}</span>
+// function acceptData() {
+//     data["text"] = username.value;
+//     data["message"] = message.value;
+//     console.log(data);
+//     createPost();
+// };
+let card = 0;
+
+function createPost(username, message) {
+    // let temp = [data.text, data.message];
+    // result.unshift(temp);
+    // let messages = '';
+    // for(let i = 0; i < result.length; i++){
+        messages = `<div class="kotak" id="message-${card}">
+            <span class="username">${username}</span>
             <div class="post">
-                ${result[i][1]}
+                ${message}
             </div>
             <div class="like">
-                <button class="button button-like">
-                    <i class="fa fa-heart"></i>
-                    <span>Like</span>
+                <button class="button button-like" onclick="deletePost('message-${card}')" >
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                    <span>Delete</span>
                 </button>
             </div>
         </div>`
-    }
-    thumbpost.innerHTML = messages;
+    thumbpost.innerHTML += messages;
+    card += 1
 };
 
-function deletePost(){
-    
+function deletePost(card){
+    // console.log(test)
+    const element = document.getElementById(card);
+    element.remove()
 }
 
 function likePost(){
-
+    
 }
