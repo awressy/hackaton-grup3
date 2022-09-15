@@ -1,0 +1,45 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0px;
+}
+
+.kotak {
+    margin: 5px;
+    padding: 10px;
+}
+
+input, textarea{
+    font-size: 20px;
+}
+
+input[type=text]{
+    width: 200px;
+    
+}
+
+textarea{
+    
+}
+
+input[type=button] {
+    
+}
+
+.bluk {
+    display: block;
+}
+
+.container{
+    font-size: 20px;
+    background-color: #aaa;
+    margin: 0;
+    padding-top: 30px;
+}
+
+.main{
+    width: 50%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 100vh;
+}
