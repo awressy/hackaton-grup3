@@ -11,6 +11,9 @@ form.addEventListener("button", (e) => {
 });
 
 function eventPost(){
+}
+
+
 //kode username
     if (username.value === "") {
         post.innerHTML = "Please insert a username";

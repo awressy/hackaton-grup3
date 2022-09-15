@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
+    <!--utk like button-->
+      <link href="style2.css" rel="stylesheet" /> 
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <title>Media Social</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
+      <div class="main">
+        <div class="kotak">
+          <form class="kotak">
+            <input
+              type="text"
+              class="bluk"
+              name="username"
+              placeholder="Username anda"
+              id="username"
+            />
+            <textarea
+              class="bluk"
+              name="post"
+              placeholder="Posting disini!"
+              id="post"
+            ></textarea>
+            <input
+              type="button"
+              value="Post"
+              onclick="eventPost()"
+              class="bluk"
+            />
+          </form>
+        </div>
+        <div class="thumbpost kotak">
+          <!--loop[1]-->
+          <div class="kotak">
+            <!-- Nanti yg diubah di js nya bagian ini dulu, kayak di for loop atau apa-->
+            <span class="username">Andi</span
+            ><!--Post dari input text username-->
+            <div class="post">halo kak apa kabar?</div>
+            <!--Post dari textarea post-->
+            
+            
+            <div class="like">
+              <button class="button button-like">
+                <i class="fa fa-heart"></i>
+                <span>Like</span>
+              </button>
+            </div>
         <div class="main">
             <div class="kotak">
                 <form class="kotak" id="form">
@@ -28,31 +71,23 @@
                     </div><!--Post dari textarea post-->
                 </div>
 
-                 <!--loop[0]-->
-                <div class="kotak">
-                    <!-- Nanti yg diubah di js nya bagian ini dulu, kayak di for loop atau apa-->
-                    <span class="username">Ajam</span><!--Post dari input text username-->
-                    <div class="post">
-                        halo dek apa kabar?
-                    </div><!--Post dari textarea post-->
-                </div>
+            
+          </div>
 
-            </div>
+          <!--loop[0]-->
+          <div class="kotak">
+            <!-- Nanti yg diubah di js nya bagian ini dulu, kayak di for loop atau apa-->
+            <span class="username">Ajam</span
+            ><!--Post dari input text username-->
+            <div class="post">halo dek apa kabar?</div>
+            <!--Post dari textarea post-->
+          </div>
         </div>
+      </div>
     </div>
     <script src="index.js"></script>
-    <script>
 
-    </script>
     
 </body>
 </html>
 
-<!--
-    1. Delete & Edit
-    2. Like dan Unlike
-    3. Repost
-    4. Comment
-    5. Logo
-    6. Artikel/Gambar
--->
