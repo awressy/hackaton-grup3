@@ -12,9 +12,9 @@
         <div class="main">
             <div class="kotak">
                 <form class="kotak">
-                    <input type="text" class="bluk" name="username" placeholder="Username anda"/>
-                    <textarea class="bluk" name="post" placeholder="Posting disini!"></textarea>
-                    <input type="button" value="Post" onclick="eventPost" class="bluk"/>
+                    <input type="text" class="bluk" name="username" placeholder="Username anda" id="username"/>
+                    <textarea class="bluk" name="post" placeholder="Posting disini!" id="post"></textarea>
+                    <input type="button" value="Post" onclick="eventPost()" class="bluk"/>
                 </form>
             </div>
             <div class="thumbpost kotak">
@@ -22,8 +22,8 @@
                 <!--loop[1]-->
                 <div class="kotak">
                     <!-- Nanti yg diubah di js nya bagian ini dulu, kayak di for loop atau apa-->
-                    <span>username: Andi</span><!--Post dari input text username-->
-                    <div>
+                    <span class="username">username: Andi</span><!--Post dari input text username-->
+                    <div class="post">
                         halo kak apa kabar?
                     </div><!--Post dari textarea post-->
                 </div>
@@ -31,8 +31,8 @@
                  <!--loop[0]-->
                 <div class="kotak">
                     <!-- Nanti yg diubah di js nya bagian ini dulu, kayak di for loop atau apa-->
-                    <span>username: Ajam</span><!--Post dari input text username-->
-                    <div>
+                    <span class="username">username: Ajam</span><!--Post dari input text username-->
+                    <div class="post">
                         halo dek apa kabar?
                     </div><!--Post dari textarea post-->
                 </div>
