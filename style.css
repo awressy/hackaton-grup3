@@ -4,25 +4,43 @@ body{
 }
 
 .kotak {
-    margin: 5px;
     padding: 10px;
+}
+
+.container form{
+    width: 500px;
+    margin: 20px auto;
+    top: 100px;
 }
 
 input, textarea{
     font-size: 20px;
+    margin: 10px 0;
 }
 
 input[type=text]{
-    width: 200px;
-    
+    width: 100%;
+    padding: 5px 10px;
 }
 
 textarea{
-    
+    width: 100%;
+    height: 150px;
+    padding: 5px 10px;
 }
 
-input[type=button] {
-    
+.container form input[type=button] {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.container form input[type=button]:hover {
+    background-color: #05f;
+    cursor: pointer;
 }
 
 .bluk {
@@ -33,7 +51,6 @@ input[type=button] {
     font-size: 20px;
     background-color: #aaa;
     margin: 0;
-    padding-top: 30px;
 }
 
 .main{
@@ -42,4 +59,28 @@ input[type=button] {
     margin: 0 auto;
     background-color: #fff;
     height: 100vh;
+}
+.thumbpost {
+    width: 70%;
+    margin: -30px auto 0;
+}
+
+.thumbpost > div {
+    margin: 20px 0;
+    background-color: #ddd;
+    
+    padding: 10px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 3px solid #000;
+}
+
+.username {
+    font-size: 17px;
+    font-weight: bold;
+    color: #555;
+}
+
+.post {
+    margin-top: 10px;
+    font-size: 21px;
 }
