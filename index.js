@@ -16,49 +16,83 @@ function eventPost(){
     } else {
         console.log("successs");
         message.innerHTML = "";
-        acceptData();
+        createPost(username.value, message.value);
+
     }
 }
 
 
 //kode username
-    
 
-let data = {};
-let result = [];
+// yang dikomen dihapus aja yaa
 
-function acceptData() {
-    data["text"] = username.value;
-    data["message"] = message.value;
-    console.log(data);
-    createPost();
-};
+// // let data = {};
+// // let result = [];
 
-function createPost() {
-    let temp = [data.text, data.message];
-    result.unshift(temp);
-    let messages = '';
-    for(let i = 0; i < result.length; i++){
-        messages += `<div class="kotak" id="message-${i}">
-            <span class="username">${result[i][0]}</span>
-            <div class="post">
-                ${result[i][1]}
+// function acceptData() {
+//     data["text"] = username.value;
+//     data["message"] = message.value;
+//     console.log(data);
+//     createPost();
+// };
+let card = 0;
+
+function createPost(username, message) {
+    // let temp = [data.text, data.message];
+    // result.unshift(temp);
+    // let messages = '';
+    // for(let i = 0; i < result.length; i++){
+        messages = `<div class="kotak" id="message-${card}">
+            <span class="username">${username}</span>
+            <div class="post" id="edit-post-${card}">
+                ${message}
             </div>
+
             <div class="like">
-                <button class="button button-like">
+                
+                <button class="button button-like" onClick="clickedLike(this)">
                     <i class="fa fa-heart"></i>
                     <span>Like</span>
                 </button>
+                <button class="button button-like" onclick="deletePost('message-${card}')" >
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    <span>Delete</span>
+                </button>
+                <button class="button button-like" onclick="editPost('message-${card}', edit-post-${card}, ${message})" >
+                    <i class="fa fa-edit" aria-hidden="true"></i>
+                    <span>Edit</span>
+                </button>
             </div>
         </div>`
-    }
-    thumbpost.innerHTML = messages;
+    let past = thumbpost.innerHTML;
+    thumbpost.innerHTML = messages + past;
+    card += 1
 };
 
-function deletePost(){
-    
+function deletePost(card){
+    // console.log(test)
+    const element = document.getElementById(card);
+    element.remove()
 }
 
-function likePost(){
+// function editPost(card, edit_post, message){
+//     // console.log(test)
+//     const element = document.getElementById(card);
+//     let id = document.getElementById("edit_post");
+//     id.innerHTML = `
+//     <div class="post">
+//         <textarea>
+//             ${message}
+//         </textarea>
+//     </div>
+//     `;
+// }
 
-}
+function clickedLike(element) {
+    console.log("button-like clicked");
+    if (element.classList.contains('button-like')){
+      element.classList.toggle('liked');
+    } else {
+      element.classList.toggle('button-like');
+    }
+  }

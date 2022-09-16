@@ -1,9 +1,10 @@
 
 .button-like {
+  margin-top: 10px;
   border: 2px solid #8a8a8a;
   background-color: transparent;
   text-decoration: none;
-  padding: 1rem;
+  padding: 5px 10px;
   position: relative;
   vertical-align: middle;
   text-align: center;
@@ -13,9 +14,11 @@
   transition: all ease 0.4s;
 }
 
+/*
 .button-like span {
   margin-left: 0.5rem;
 }
+*/
 
 .button-like .fa,
 .button-like span {
@@ -34,6 +37,7 @@
 .button-like:hover {
   border-color: #cc4b37;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .button-like:hover .fa,
