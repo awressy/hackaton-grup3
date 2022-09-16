@@ -1,16 +1,17 @@
 
 .button-like {
-  border: 2px solid #8a8a8a;
+  /* border: 2px solid #8a8a8a; */
   background-color: transparent;
   text-decoration: none;
-  padding: 1rem;
+  padding: 4px;
   position: relative;
   vertical-align: middle;
   text-align: center;
   display: inline-block;
-  border-radius: 3rem;
+  border-radius: 8px;
   color: #8a8a8a;
   transition: all ease 0.4s;
+  margin-top: 24px;
 }
 
 .button-like span {
@@ -34,6 +35,7 @@
 .button-like:hover {
   border-color: #cc4b37;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .button-like:hover .fa,
@@ -63,6 +65,7 @@
 .liked:hover {
   background-color: #cc4b37;
   border-color: #cc4b37;
+  cursor: pointer;
 }
 
 .liked:hover .fa,
