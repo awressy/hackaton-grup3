@@ -1,6 +1,8 @@
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0px;
+    height: 100vh;
+    max-height: 100vh;
 }
 
 h1 {
@@ -122,6 +124,17 @@ input[type=button].cancelbutton:hover {
     overflow-y: scroll;
     height:500px;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.thumbpost::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .thumbpost {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
 .thumbpost > div {
     margin: 20px 0;
