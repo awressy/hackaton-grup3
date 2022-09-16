@@ -107,7 +107,7 @@ function eventEdit(card, username){
                 <i class="fa fa-trash" aria-hidden="true"></i>
                 <span>Delete</span>
             </button>
-            <button class="button button-like" onclick="editPost(${card}, ${username}, '${message}')" >
+            <button class="button button-like" onclick="editPost('${card}', '${username}', '${message}')" >
                 <i class="fa fa-edit" aria-hidden="true"></i>
                 <span>Edit</span>
             </button>
@@ -132,7 +132,7 @@ function eventCancel(card, username, message){
                 <i class="fa fa-trash" aria-hidden="true"></i>
                 <span>Delete</span>
             </button>
-            <button class="button button-like" onclick="editPost(${card}, ${username}, '${message}')" >
+            <button class="button button-like" onclick="editPost('${card}', '${username}', '${message}')" >
                 <i class="fa fa-edit" aria-hidden="true"></i>
                 <span>Edit</span>
             </button>
