@@ -3,6 +3,10 @@ body{
     margin: 0px;
 }
 
+h1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .kotak {
     padding: 10px;
 }
@@ -42,6 +46,39 @@ textarea{
     margin-top: 20px;
 }
 
+#edit-message{
+    max-width: 300px;
+    border: none;
+}
+
+.editbutton{
+    background-color: blue;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 25px;
+    display: inline !important;
+    cursor: pointer;
+}
+
+input[type=button].editbutton:hover {
+    background-color: #09c;
+}
+
+.cancelbutton{
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 25px;
+    display: inline !important;
+    cursor: pointer;
+}
+
+input[type=button].cancelbutton:hover {
+    background-color: #b55;
+}
+
 .container form input[type=button] {
     background-color: blue;
     color: #fff;
@@ -64,6 +101,7 @@ textarea{
     font-size: 20px;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(26,127,176,1) 0%, rgba(0,212,255,1) 100%);
+    background-image: url("back.jpg");
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -75,6 +113,8 @@ textarea{
     margin: 0 auto;
     background-color: #fff;
     height: 100vh;
+    border-right: 3px solid grey;
+    border-left: 3px solid grey;
 }
 .thumbpost {
     width: 70%;

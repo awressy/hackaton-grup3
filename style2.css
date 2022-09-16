@@ -1,3 +1,6 @@
+.like{
+  margin-top: 10px;
+}
 
 .button-like {
   margin-top: 10px;
@@ -13,6 +16,8 @@
   color: #8a8a8a;
   transition: all ease 0.4s;
 }
+
+
 
 /*
 .button-like span {
@@ -40,9 +45,18 @@
   cursor: pointer;
 }
 
+.button-edit:hover {
+  border-color: #0bc !important;
+}
+
 .button-like:hover .fa,
 .button-like:hover span {
   color: #cc4b37;
+}
+
+.button-edit:hover .fa,
+.button-edit:hover span {
+  color: #0bc !important;
 }
 
 .liked {

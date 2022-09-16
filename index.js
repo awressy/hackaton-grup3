@@ -57,7 +57,7 @@ function createPost(username, message) {
                     <i class="fa fa-trash" aria-hidden="true"></i>
                     <span>Delete</span>
                 </button>
-                <button class="button button-like" onclick="editPost('${card}', '${username}', '${message}')" >
+                <button class="button button-edit button-like" onclick="editPost('${card}', '${username}', '${message}')" >
                     <i class="fa fa-edit" aria-hidden="true"></i>
                     <span>Edit</span>
                 </button>
@@ -84,8 +84,8 @@ function editPost(card, username, message){
     <div class="post">
         <textarea id="edit-message">${message}</textarea>
     </div>
-    <input type="button" value="Edit" onclick="eventEdit('${card}', '${username}')" class="bluk"/>
-    <input type="button" value="Cancel" onclick="eventCancel('${card}', '${username}', '${message}')" class="bluk"/>
+    <input type="button" value="Edit" onclick="eventEdit('${card}', '${username}')" class="bluk editbutton"/>
+    <input type="button" value="Cancel" onclick="eventCancel('${card}', '${username}', '${message}')" class="bluk cancelbutton"/>
     `;
 }
 
@@ -107,10 +107,11 @@ function eventEdit(card, username){
                 <i class="fa fa-trash" aria-hidden="true"></i>
                 <span>Delete</span>
             </button>
-            <button class="button button-like" onclick="editPost('${card}', '${username}', '${message}')" >
+            <button class="button button-edit button-like" onclick="editPost('${card}', '${username}', '${message}')" >
                 <i class="fa fa-edit" aria-hidden="true"></i>
                 <span>Edit</span>
             </button>
+            <p style="font-size:11px">Edited</p>
         </div>
     `
 }
@@ -132,7 +133,7 @@ function eventCancel(card, username, message){
                 <i class="fa fa-trash" aria-hidden="true"></i>
                 <span>Delete</span>
             </button>
-            <button class="button button-like" onclick="editPost('${card}', '${username}', '${message}')" >
+            <button class="button button-edit button-like" onclick="editPost('${card}', '${username}', '${message}')" >
                 <i class="fa fa-edit" aria-hidden="true"></i>
                 <span>Edit</span>
             </button>
