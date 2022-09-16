@@ -56,22 +56,27 @@ function createPost() {
 function deletePost() {}
 
 let likeStatus = {};
-var buttonsLike = document.getElementsByClassName("button-like");
+// var buttonsLike = document.getElementsByClassName("button-like");
 // document.addEventListener("DOMContentLoaded", clickedLike());
 function clickedLike(element) {
   console.log("button-like clicked");
-  let postId=element.id;
-  // console.log(postId)
-  if (!likeStatus[postId]) {
-    likeStatus[postId] = false;
-  }
-  if (likeStatus[postId] === false) {
-    likeStatus[postId] = true;
-    //tambahkan class-toggler dengan selector yg tepat
+  // let postId=element.id;
+  // if (!likeStatus[postId]) {
+  //   likeStatus[postId] = false;
+  // }
+  // if (likeStatus[postId] === false) {
+  //   likeStatus[postId] = true;
+  //   //tambahkan class-toggler dengan selector yg tepat
+  // } else {
+  //   likeStatus[postId] = false;
+  //   //tambahkan class-toggler dengan selector yg tepat
+  // }
+  if (element.classList.contains('button-like')){
+    element.classList.toggle('liked');
   } else {
-    likeStatus[postId] = false;
-    //tambahkan class-toggler dengan selector yg tepat
+    element.classList.toggle('button-like');
   }
+
 }
 
 function likePost(postId) {
