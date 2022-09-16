@@ -16,7 +16,7 @@ function eventPost(){
     } else {
         console.log("successs");
         message.innerHTML = "";
-        createPost(username.value, message.value);
+        createPost(username.value, document.getElementById("message").value);
 
     }
 }
@@ -49,7 +49,6 @@ function createPost(username, message) {
             </div>
 
             <div class="like">
-                
                 <button class="button button-like" onClick="clickedLike(this)">
                     <i class="fa fa-heart"></i>
                     <span>Like</span>
@@ -58,7 +57,7 @@ function createPost(username, message) {
                     <i class="fa fa-trash" aria-hidden="true"></i>
                     <span>Delete</span>
                 </button>
-                <button class="button button-like" onclick="editPost('message-${card}', edit-post-${card}, ${message})" >
+                <button class="button button-like" onclick="editPost('${card}', '${username}', '${message}')" >
                     <i class="fa fa-edit" aria-hidden="true"></i>
                     <span>Edit</span>
                 </button>
@@ -75,18 +74,71 @@ function deletePost(card){
     element.remove()
 }
 
-// function editPost(card, edit_post, message){
-//     // console.log(test)
-//     const element = document.getElementById(card);
-//     let id = document.getElementById("edit_post");
-//     id.innerHTML = `
-//     <div class="post">
-//         <textarea>
-//             ${message}
-//         </textarea>
-//     </div>
-//     `;
-// }
+function editPost(card, username, message){
+    // console.log(test)
+    //const element = document.getElementById(card);
+    const id = document.getElementById(`edit-post-${card}`);
+    //id.remove();
+    //id.innerHTML ='yhalo'
+    id.innerHTML = `
+    <div class="post">
+        <textarea id="edit-message">${message}</textarea>
+    </div>
+    <input type="button" value="Edit" onclick="eventEdit('${card}', '${username}')" class="bluk"/>
+    <input type="button" value="Cancel" onclick="eventCancel('${card}', '${username}', '${message}')" class="bluk"/>
+    `;
+}
+
+function eventEdit(card, username){
+    const id = document.getElementById(`message-${card}`);
+    const message = document.getElementById(`edit-message`).value;
+    id.innerHTML = `
+        <span class="username">${username}</span>
+        <div class="post" id="edit-post-${card}">
+            ${message}
+        </div>
+
+        <div class="like">
+            <button class="button button-like" onClick="clickedLike(this)">
+                <i class="fa fa-heart"></i>
+                <span>Like</span>
+            </button>
+            <button class="button button-like" onclick="deletePost('message-${card}')" >
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                <span>Delete</span>
+            </button>
+            <button class="button button-like" onclick="editPost(${card}, ${username}, '${message}')" >
+                <i class="fa fa-edit" aria-hidden="true"></i>
+                <span>Edit</span>
+            </button>
+        </div>
+    `
+}
+
+function eventCancel(card, username, message){
+    const id = document.getElementById(`message-${card}`);
+    id.innerHTML = `
+        <span class="username">${username}</span>
+        <div class="post" id="edit-post-${card}">
+            ${message}
+        </div>
+
+        <div class="like">
+            <button class="button button-like" onClick="clickedLike(this)">
+                <i class="fa fa-heart"></i>
+                <span>Like</span>
+            </button>
+            <button class="button button-like" onclick="deletePost('message-${card}')" >
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                <span>Delete</span>
+            </button>
+            <button class="button button-like" onclick="editPost(${card}, ${username}, '${message}')" >
+                <i class="fa fa-edit" aria-hidden="true"></i>
+                <span>Edit</span>
+            </button>
+        </div>
+    `
+}
 
 function clickedLike(element) {
     console.log("button-like clicked");
